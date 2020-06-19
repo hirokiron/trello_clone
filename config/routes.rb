@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :lists
-  resources :cards
+  resources :lists do
+    member do
+      patch :move
+    end
+  end
+  resources :cards do
+    member do
+      patch :move
+    end
+  end
 
-  root 'lists#index'
+  root to: 'lists#index'
 end
