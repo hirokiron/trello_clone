@@ -14,6 +14,7 @@ gem 'acts_as_list'
 # ログイン機能
 gem 'devise'
 
+
 # 日本語化
 gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
