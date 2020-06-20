@@ -4,7 +4,11 @@ class ListsController < ApplicationController
   # GET /lists
   # GET /lists.json
   def index
-    @lists = List.sorted
+    if user_signed_in?
+      @lists = List.sorted
+    else
+      redirect_to new_user_registration_path
+    end
   end
 
   # GET /lists/1
@@ -65,7 +69,7 @@ class ListsController < ApplicationController
     @list.insert_at(list_params[:position].to_i)
     render action: :show
   end
-  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_list
