@@ -97,13 +97,16 @@ export default {
 .board {
   overflow-x: auto;
   white-space: nowrap;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(12,59,196,1) 26%, rgba(0,212,255,1) 100%);
 }
 
 .list {
-  background: #E2E4E6;
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
   border-radius: 3px;
   display: inline-block;
-  margin-right: 20px;
+  margin: 20px 15px 20px 5px;
   padding: 10px;
   vertical-align: top;
   width: 270px;
